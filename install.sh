@@ -85,3 +85,5 @@ sudo pacman -S ksnip
 sudo pacman -S qbittorrent 
 sudo pacman -S vim
 sudo pacman -S discord
+sudo wget https://zoom.us/client/latest/zoom_x86_64.pkg.tar.xz
+sudo pacman -U zoom_x86_64.pkg.tar.xz
