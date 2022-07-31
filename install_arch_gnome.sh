@@ -58,6 +58,11 @@ meson _build
 meson install -C _build
 cd
 
+# add fonts
+sudo pacman -S noto-fonts-cjk
+sudo pacman -S noto-fonts-emoji
+sudo pacman -S noto-fonts
+
 # python
 sudo pacman -S python-pip
 pip install mutagen
