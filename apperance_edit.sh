@@ -18,4 +18,4 @@ git clone https://github.com/yilozt/mutter-rounded-setting
 cd ./mutter-rounded-setting
 ./install
 cd
-# gjs dist/mutter_settings.js`
+# gjs dist/mutter_settings.js
