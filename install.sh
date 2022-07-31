@@ -15,6 +15,17 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 cd
 
+# change color shell prompt
+echo "" > ~/.bashrc
+echo "[[ $- != *i* ]] && return" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "alias ls='ls --color=auto'" >> ~/.bashrc
+echo "_Cyan=$(tput setaf 6)" >> ~/.bashrc
+echo "_Red=$(tput setaf 1)" >> ~/.bashrc
+echo "_RESET=$(tput sgr0)" >> ~/.bashrc
+echo "_BOLD=$(tput bold)" >> ~/.bashrc
+echo "export PS1="${_Cyan}${_BOLD}\t${_Red}@${_Cyan}\u${_Red}@${_Cyan}\h${_Red}@${_Cyan}\W >> ${_RESET}"" >> ~/.bashrc
+
 # neofetch
 sudo pacman -S neofetch
 neofetch
