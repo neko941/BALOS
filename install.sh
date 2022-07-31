@@ -46,3 +46,4 @@ sudo pacman -S obs-studio
 sudo pacman -S ksnip
 sudo pacman -S qbittorrent 
 sudo pacman -S vim
+sudo pacman -S discord
