@@ -21,6 +21,12 @@ sudo wget https://raw.githubusercontent.com/neko941/BALOS/main/config.conf -O ./
 echo "" >> ~/.bashrc
 echo "neofetch" >> ~/.bashrc
 
+# transpent terminal
+git clone https://aur.archlinux.org/gnome-terminal-transparency.git 
+cd gnome-terminal-transparency
+makepkg -si
+cd
+
 # python
 sudo pacman -S python-pip
 pip install mutagen
