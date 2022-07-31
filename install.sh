@@ -14,6 +14,11 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 cd
 
+# neofetch
+sudo pacman -S neofetch
+neofetch
+sudo wget https://raw.githubusercontent.com/neko941/BALOS/main/config.conf -O ./.config/neofetch/config.conf
+
 # python
 sudo pacman -S python-pip
 pip install mutagen
@@ -39,4 +44,3 @@ sudo pacman -S obs-studio
 sudo pacman -S ksnip
 sudo pacman -S qbittorrent 
 sudo pacman -S vim
-sudo pacman -S neofetch
