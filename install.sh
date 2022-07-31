@@ -14,6 +14,14 @@ sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
 cd
 
+# python
+sudo pacman -S python-pip
+pip install mutagen
+pip install alive-progress
+
+# mount drive
+sudo pacman -S ntfs-3g
+
 # VNI
 yay -S pamac-aur-git
 echo "" >> ~/.bashrc
@@ -30,3 +38,5 @@ sudo pacman -S vlc
 sudo pacman -S obs-studio
 sudo pacman -S ksnip
 sudo pacman -S qbittorrent 
+sudo pacman -S vim
+sudo pacman -S neofetch
