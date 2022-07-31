@@ -25,6 +25,7 @@ echo "_Red=$(tput setaf 1)" >> ~/.bashrc
 echo "_RESET=$(tput sgr0)" >> ~/.bashrc
 echo "_BOLD=$(tput bold)" >> ~/.bashrc
 echo "export PS1="${_Cyan}${_BOLD}\t${_Red}@${_Cyan}\u${_Red}@${_Cyan}\h${_Red}@${_Cyan}\W >> ${_RESET}"" >> ~/.bashrc
+#echo "export PS1="${_Cyan}${_BOLD}\t${_Red}@${_Cyan}\u${_Red}@${_Cyan}\h${_Red}@${_Cyan}\$PWD >> ${_RESET}"" >> ~/.bashrc
 
 # neofetch
 sudo pacman -S neofetch
