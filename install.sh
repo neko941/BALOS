@@ -18,6 +18,8 @@ cd
 sudo pacman -S neofetch
 neofetch
 sudo wget https://raw.githubusercontent.com/neko941/BALOS/main/config.conf -O ./.config/neofetch/config.conf
+echo "" >> ~/.bashrc
+echo "neofetch" >> ~/.bashrc
 
 # python
 sudo pacman -S python-pip
