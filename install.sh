@@ -77,8 +77,15 @@ echo "export QT4_IM_MODULE=ibus" >> ~/.bashrc
 echo "export CLUTTER_IM_MODULE=ibus" >> ~/.bashrc
 echo "ibus-daemon -drx" >> ~/.bashrc
 
-# other
+# browser
 sudo pacman -S firefox
+sudo snap install brave
+
+# networking
+sudo pacman -S wireshark-cli
+sudo pacman -S wireshark-qt
+
+# other
 sudo pacman -S vlc
 sudo pacman -S obs-studio
 sudo pacman -S ksnip
