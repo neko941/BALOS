@@ -2,6 +2,7 @@ sudo pacman -Syu
 sudo pacman -Syy
 sudo pacman -S --needed base-devel
 sudo pacman -S git 
+sudo pacman -S npm
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -27,6 +28,24 @@ cd gnome-terminal-transparency
 makepkg -si
 cd
 
+# add themes
+sudo pacman -S gtk-engines
+sudo pacman -S gtk-engine-murrine
+sudo pacman -S ninja
+sudo pacman -S meson
+sudo pacman -S sassc
+sudo pacman -S dart-sass
+git clone https://github.com/lassekongo83/zuki-themes.git
+cd zuki-themes
+meson build
+sudo ninja -C build install
+cd
+git clone https://github.com/ckissane/materia-theme-transparent.git
+cd materia-theme-transparent
+meson _build
+meson install -C _build
+cd
+
 # python
 sudo pacman -S python-pip
 pip install mutagen
@@ -46,6 +65,7 @@ echo "export QT4_IM_MODULE=ibus" >> ~/.bashrc
 echo "export CLUTTER_IM_MODULE=ibus" >> ~/.bashrc
 echo "ibus-daemon -drx" >> ~/.bashrc
 
+# other
 sudo pacman -S firefox
 sudo pacman -S vlc
 sudo pacman -S obs-studio
