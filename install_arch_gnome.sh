@@ -69,7 +69,6 @@ sudo wget https://github.com/EliverLara/candy-icons/archive/refs/heads/master.zi
 sudo rm -rf candy-icons-master.zip
 cd ~
 
-
 # add themes
 sudo pacman -S gtk-engines
 sudo pacman -S gtk-engine-murrine
@@ -87,7 +86,6 @@ cd materia-theme-transparent
 meson _build
 meson install -C _build
 cd
-
 
 # add fonts
 sudo pacman -S noto-fonts-cjk
@@ -116,6 +114,11 @@ echo "ibus-daemon -drx" >> ~/.bashrc
 # browser
 sudo pacman -S firefox
 sudo snap install brave
+
+# office 
+git clone https://aur.archlinux.org/wps-office.git
+makepkg -si
+cd
 
 # networking
 sudo pacman -S wireshark-cli
