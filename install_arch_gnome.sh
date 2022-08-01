@@ -40,6 +40,36 @@ cd gnome-terminal-transparency
 makepkg -si
 cd
 
+# add curors
+git clone https://github.com/vinceliuice/Colloid-icon-theme.git
+cd Colloid-icon-theme/cursors
+sudo ./install.sh
+sudo ./build.sh
+cd ~
+git clone https://github.com/alvatip/Neonly
+cd Neonly
+sudo ./install.sh
+cd
+git clone https://github.com/alvatip/Nordzy-cursors
+cd Nordzy-cursors
+sudo ./install.sh
+cd
+git clone https://github.com/alvatip/Borealis-cursors
+cd Borealis-cursors
+sudo ./install.sh
+cd
+git clone https://github.com/alvatip/Sunity-cursors
+cd Sunity-cursors
+sudo ./install.sh
+cd
+
+# add icons
+cd /usr/share/icons
+sudo wget https://github.com/EliverLara/candy-icons/archive/refs/heads/master.zip -O candy-icons-master.zip
+sudo rm -rf candy-icons-master.zip
+cd ~
+
+
 # add themes
 sudo pacman -S gtk-engines
 sudo pacman -S gtk-engine-murrine
@@ -57,6 +87,7 @@ cd materia-theme-transparent
 meson _build
 meson install -C _build
 cd
+
 
 # add fonts
 sudo pacman -S noto-fonts-cjk
