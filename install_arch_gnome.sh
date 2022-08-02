@@ -120,13 +120,24 @@ git clone https://aur.archlinux.org/wps-office.git
 makepkg -si
 cd
 
+# screen recorder
+sudo pacman -S obs-studio
+git clone https://aur.archlinux.org/kazam.git
+cd kazam/
+sudo pacman -S libkeybinder3 
+sudo pacman -S gst-libav 
+sudo pacman -S libwnck3
+sudo pacman -S python-distutils-extra
+makepkg -si
+cd ..
+
+
 # networking
 sudo pacman -S wireshark-cli
 sudo pacman -S wireshark-qt
 
 # other
 sudo pacman -S vlc
-sudo pacman -S obs-studio
 sudo pacman -S ksnip
 sudo pacman -S qbittorrent 
 sudo pacman -S vim
