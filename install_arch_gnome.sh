@@ -40,10 +40,22 @@ cd gnome-terminal-transparency
 makepkg -si
 cd
 
-# Network Manager
+# visual studio code
+git clone https://AUR.archlinux.org/visual-studio-code-bin.git
+cd visual-studio-code-bin/
+makepkg -s
+sudo pacman -U visual-studio-code-bin-*.pkg.tar.zst
+cd ../ 
+sudo rm -rfv visual-studio-code-bin/
+
+# network manager
 sudo pacman -S networkmanager
 sudo systemctl start NetworkManager
 sudo systemctl enable NetworkManager
+
+# networking
+sudo pacman -S wireshark-cli
+sudo pacman -S wireshark-qt
 
 # GNOME
 sudo pacman -S gnome
@@ -141,11 +153,6 @@ sudo pacman -S libwnck3
 sudo pacman -S python-distutils-extra
 makepkg -si
 cd ..
-
-
-# networking
-sudo pacman -S wireshark-cli
-sudo pacman -S wireshark-qt
 
 # other
 sudo pacman -S vlc
