@@ -7,13 +7,16 @@ sudo pacman -S npm
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-cd
+cd ../ 
+sudo rm -rfv yay/
+
 git clone https://aur.archlinux.org/snapd.git
 cd snapd
 makepkg -si
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
-cd
+cd ../ 
+sudo rm -rfv snapd/
 
 # change color shell prompt
 echo "" > ~/.bashrc
@@ -38,7 +41,8 @@ echo "neofetch" >> ~/.bashrc
 git clone https://aur.archlinux.org/gnome-terminal-transparency.git 
 cd gnome-terminal-transparency
 makepkg -si
-cd
+cd ../ 
+sudo rm -rfv gnome-terminal-transparency/
 
 # visual studio code
 git clone https://AUR.archlinux.org/visual-studio-code-bin.git
@@ -68,23 +72,28 @@ git clone https://github.com/vinceliuice/Colloid-icon-theme.git
 cd Colloid-icon-theme/cursors
 sudo ./install.sh
 sudo ./build.sh
-cd ~
+cd ../ 
+sudo rm -rfv Colloid-icon-theme/
 git clone https://github.com/alvatip/Neonly
 cd Neonly
 sudo ./install.sh
-cd
+cd ../ 
+sudo rm -rfv Neonly/
 git clone https://github.com/alvatip/Nordzy-cursors
 cd Nordzy-cursors
 sudo ./install.sh
-cd
+cd ../ 
+sudo rm -rfv Nordzy-cursors/
 git clone https://github.com/alvatip/Borealis-cursors
 cd Borealis-cursors
 sudo ./install.sh
-cd
+cd ../ 
+sudo rm -rfv Borealis-cursors/
 git clone https://github.com/alvatip/Sunity-cursors
 cd Sunity-cursors
 sudo ./install.sh
-cd
+cd ../ 
+sudo rm -rfv Sunity-cursors/
 
 # add icons
 cd /usr/share/icons
@@ -103,12 +112,14 @@ git clone https://github.com/lassekongo83/zuki-themes.git
 cd zuki-themes
 meson build
 sudo ninja -C build install
-cd
+cd ../ 
+sudo rm -rfv zuki-themes/
 git clone https://github.com/ckissane/materia-theme-transparent.git
 cd materia-theme-transparent
 meson _build
 meson install -C _build
-cd
+cd ../ 
+sudo rm -rfv materia-theme-transparent/
 
 # add fonts
 sudo pacman -S noto-fonts-cjk
@@ -125,6 +136,7 @@ sudo pacman -S ntfs-3g
 
 # VNI
 yay -S pamac-aur-git
+yay -S ibus-bamboo-git
 echo "" >> ~/.bashrc
 echo "export GTK_IM_MODULE=ibus" >> ~/.bashrc
 echo "export GTK_IM_MODULE=ibus" >> ~/.bashrc
@@ -141,7 +153,8 @@ sudo snap install brave
 # office 
 git clone https://aur.archlinux.org/wps-office.git
 makepkg -si
-cd
+cd ../ 
+sudo rm -rfv wps-office/
 
 # screen recorder
 sudo pacman -S obs-studio
@@ -152,7 +165,8 @@ sudo pacman -S gst-libav
 sudo pacman -S libwnck3
 sudo pacman -S python-distutils-extra
 makepkg -si
-cd ..
+cd ../ 
+sudo rm -rfv kazam/
 
 # other
 sudo pacman -S vlc
