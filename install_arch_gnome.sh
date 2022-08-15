@@ -40,6 +40,17 @@ cd gnome-terminal-transparency
 makepkg -si
 cd
 
+# Network Manager
+sudo pacman -S networkmanager
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+
+# GNOME
+sudo pacman -S gnome
+sudo systemctl start gdm
+sudo systemctl enable gdm
+sudo pacman -S gnome-tweaks
+
 # add curors
 git clone https://github.com/vinceliuice/Colloid-icon-theme.git
 cd Colloid-icon-theme/cursors
