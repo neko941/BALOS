@@ -56,10 +56,14 @@ sudo rm -rfv visual-studio-code-bin/
 sudo pacman -S networkmanager
 sudo systemctl start NetworkManager
 sudo systemctl enable NetworkManager
+sudo systemcrl disable iwd
 
 # networking
 sudo pacman -S wireshark-cli
 sudo pacman -S wireshark-qt
+
+# file transfer
+sudo pacman -S android-file-transfer
 
 # GNOME
 sudo pacman -S gnome
