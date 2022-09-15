@@ -1,3 +1,21 @@
+################## EXTERNAL PROGRAM
+PKGS=(
+# ---------------------------------------- AURS
+		'yay' 
+		
+# ---------------------------------------- OFFICE	
+		'wps-office'
+)
+
+for PKG in "${PKGS[@]}"; do
+    echo "INSTALLING: ${PKG}"
+    git clone https://aur.archlinux.org/${PKG}.git
+	cd ${PKG}
+	makepkg -si
+	cd ../ 
+	sudo rm -rfv ${PKG}/
+done
+
 ################## INSTALL
 PKGS=(
 # ---------------------------------------- BASIC
@@ -70,24 +88,6 @@ PKGS=(
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo sudo pacman -S "$PKG" --noconfirm --needed
-done
-
-################## EXTERNAL PROGRAM
-PKGS=(
-# ---------------------------------------- AURS
-		'yay' 
-		
-# ---------------------------------------- OFFICE	
-		'wps-office'
-)
-
-for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING: ${PKG}"
-    git clone https://aur.archlinux.org/${PKG}.git
-	cd ${PKG}
-	makepkg -si
-	cd ../ 
-	sudo rm -rfv ${PKG}/
 done
 
 ################## ENABLE
