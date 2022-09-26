@@ -19,12 +19,12 @@ done
 ################## INSTALL
 PKGS=(
 # ---------------------------------------- BASIC
-	'base'
-	'linux'
-	'linux-firmware'
-	'sof-firmware'
-	'base-devel'
-	'git'
+		'base'
+		'linux'
+		'linux-firmware'
+		'sof-firmware'
+		'base-devel'
+		'git'
 	
 # ---------------------------------------- I3 
 		'i3-gaps' 
@@ -33,13 +33,13 @@ PKGS=(
 		'i3status'
 # ---------------------------------------- XORG 
 		'xorg-server'           # XOrg server
-        'xorg-apps'             # XOrg apps group
-        'xorg-xinit'            # XOrg init
-        'xf86-video-intel'      # 2D/3D video driver
+		'xorg-apps'             # XOrg apps group
+		'xorg-xinit'            # XOrg init
+		'xf86-video-intel'      # 2D/3D video driver
 		#'xf86-video-amdgpu'     # AMD driver
 		'nvidia nvidia-utils'   # NVIDIA driver
-        'mesa'                  # Open source version of OpenGL
-        'xf86-input-libinput'   # Trackpad driver for Dell XPS
+		'mesa'                  # Open source version of OpenGL
+		'xf86-input-libinput'   # Trackpad driver for Dell XPS
 		'xorg-xeyes'
 		'xorg-sclock'
 		'xterm'
