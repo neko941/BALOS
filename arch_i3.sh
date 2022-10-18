@@ -37,7 +37,7 @@ PKGS=(
 		'xorg-xinit'            # XOrg init
 		'xf86-video-intel'      # 2D/3D video driver
 		#'xf86-video-amdgpu'     # AMD driver
-		'nvidia nvidia-utils'   # NVIDIA driver
+		#'nvidia nvidia-utils'   # NVIDIA driver
 		'mesa'                  # Open source version of OpenGL
 		'xf86-input-libinput'   # Trackpad driver for Dell XPS
 		'xorg-xeyes'
@@ -71,7 +71,8 @@ PKGS=(
 		'android-file-transfer'
 		
 # ---------------------------------------- NETWORK MANAGER
-
+		'netctl'
+		
 # ---------------------------------------- VIDEO
 		'vlc'
 
